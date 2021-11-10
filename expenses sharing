@@ -1,0 +1,17 @@
+import numpy as np
+import pandas as pd
+
+people = ["Athos", "Porthos", "Aramis"]   # friends names
+totals = [300, 150, 90]  # total spent per friend
+
+
+total_spent = np.array(totals).reshape(-1,1)
+share = total_spent / len(totals)
+mat = (share.T - share).clip(min=0) 
+
+
+column_labels = [f"to_{person}" for person in people] 
+index_labels = [f"{person}_owes" for person in people]
+df = pd.DataFrame(data=mat, columns=column_labels, index=index_labels)
+print(df)
+df.round(2)
