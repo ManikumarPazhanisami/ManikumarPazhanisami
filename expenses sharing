@@ -1,7 +1,7 @@
 import numpy as np
 import pandas as pd
 
-people = ["Athos", "Porthos", "Aramis"]   # friends names
+people = ["Mani", "santhosh", "yuvan"]   # friends names
 totals = [300, 150, 90]  # total spent per friend
 
 
