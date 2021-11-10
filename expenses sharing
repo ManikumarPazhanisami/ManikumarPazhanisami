@@ -11,7 +11,7 @@ mat = (share.T - share).clip(min=0)
 
 
 column_labels = [f"to_{person}" for person in people] 
-index_labels = [f"{person}_owes" for person in people]
+index_labels = [f"{person}" for person in people]
 df = pd.DataFrame(data=mat, columns=column_labels, index=index_labels)
 print(df)
 df.round(2)
